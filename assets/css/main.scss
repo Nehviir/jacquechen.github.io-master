@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap');
+
+//font variables
+
+$hfont: 'Playfair Display', serif;
+$bfont: 'Open Sans', sans-serif;
+
+//color variables
+$main-color: rgb(236, 236, 236);
+$text-color: #19222F;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 400vh;
+    -ms-overflow-style: none;
+}
+
+body {
+    background-color: $main-color;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+}
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.title {
+    position: fixed;
+    left: 3em;
+    top: 1em;
+    z-index: 2;
+}
+
+.jackie {
+    font-family: $hfont;
+    font-size: 18px;
+    color: black;
+    z-index: 1;
+    margin-bottom: 7px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.toggle {
+    position: fixed;
+    width: 40px;
+    height: 12px;
+    right: 3.5em;
+    top: 2.5em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+span.one {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: $text-color;
+}
+
+span.two {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: $text-color;
+    margin-top: 12px;
+}
+
+#nav-overlay {
+    z-index: 1;
+    position: fixed;
+    background: #9197AE;
+    height: 100%;
+    width: 100%;
+    top: -150%;
+    right: -150%;
+    -ms-overflow-style: none;
+    opacity: 0;
+}
+
+#nav-overlay::-webkit-scrollbar {
+    display: none;
+}
+
+.menu {
+    padding: 8em 0 0 2em;
+    text-align: left;
+}
+
+.menu ul {
+    list-style: none;
+    position: fixed;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding-right: 10px;
+    color: white;
+    font-size: 100px;
+    line-height: 2em;
+}
+
+
+.menu ul li a.linkoverlay {
+    text-decoration: none;
+    color: white;
+    font-family: $hfont;
+}
+
+.social {
+    position: fixed;
+    bottom: 2.5em;
+    right: 3em;
+    z-index: 1;
+}
+
+.social ion-icon {
+    color: black;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.contact {
+    position: fixed;
+    bottom: 2.5em;
+    left: 3em;
+    z-index: 1;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-family: $hfont;
+    margin-bottom: 7px;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .section {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+.slider .section a{
+    color: black;
+}
+.slider .section img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: .8;
+    box-shadow: 0px 10px 16px -6px rgb(134, 134, 134);
+}   
+
+#gallery {
+    display: grid;
+}
+
+//progress
+.barContainer {
+  position: fixed;
+  width: 3px;
+  height: 30vh;
+  background-color: lightgray;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+}
+.bar {
+  height: 20%;
+  width: 100%;
+  background-color: #2E4166;
+}
+
+//parallax
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trigger-element {
+  display: inline-block;
+  
+  .box {
+    font-size: 8vw;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: $hfont;
+    cursor: pointer;
+  }
+}
+
+.big {
+  transform: scale(3);
+}
+
+.imgwrap {
+    max-width: 70%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Scroll Down
+
+.scroll-downs {
+  position: fixed;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: auto;
+  
+  width:60px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: black;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+.scrollcap {
+    margin: 0 auto;
+    text-align: center;
+}
