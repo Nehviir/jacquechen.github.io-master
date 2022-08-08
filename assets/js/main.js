@@ -81,7 +81,7 @@ ScrollTrigger.create({
   }
 });
 
-// Parallax !!!!!! disabled due to issues with scroll and animation !!!!
+// Parallax !!!!!! disabled due to issues with scroll and animation !!!!!!
 /*
 const observerElements = document.querySelectorAll('.trigger-element');
 
